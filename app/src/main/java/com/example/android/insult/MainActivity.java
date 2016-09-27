@@ -1,11 +1,17 @@
 package com.example.android.insult;
 
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
+
+    private String[] myString;
+    private static final Random rgenerator = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,11 +20,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void randomInsult(View view) {
-        display("Vai passear");
+        Resources res = getResources();
+
+        myString = res.getStringArray(R.array.insults);
+
+        String q = myString[rgenerator.nextInt(myString.length)];
+
+        TextView tv = (TextView) findViewById(R.id.message);
+        tv.setText(q);
     }
 
     public void randomPraise(View view) {
-        display("Que bonito!");
+        Resources res = getResources();
+
+        myString = res.getStringArray(R.array.praises);
+
+        String q = myString[rgenerator.nextInt(myString.length)];
+
+        TextView tv = (TextView) findViewById(R.id.message);
+        tv.setText(q);
     }
 
     private void display(String message) {
