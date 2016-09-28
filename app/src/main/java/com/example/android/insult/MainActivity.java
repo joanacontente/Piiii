@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         tv.setText(q);
     }
 
-    public void randomPraise(View view) {
+    public void randomCompliment(View view) {
         Resources res = getResources();
 
         myString = res.getStringArray(R.array.praises);

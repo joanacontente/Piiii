@@ -44,13 +44,13 @@
         android:onClick="randomInsult" />
 
     <ImageButton
-        android:id="@+id/elogia"
+        android:id="@+id/compliments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/elogia"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:onClick="randomPraise"/>
+        android:onClick="randomCompliment"/>
 
 
 </RelativeLayout>
