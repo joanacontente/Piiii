@@ -7,60 +7,61 @@
     tools:context="com.example.android.insult.MainActivity">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/imageview"
         android:id="@+id/imageView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Insult"
-        android:id="@+id/title"
-        android:gravity="center_horizontal"
-        android:textSize="70dp"
-        android:textColor="#212121"
-        />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imageview" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
     <TextView
-        android:layout_width="1000dp"
-        android:layout_height="200dp"
-        android:id="@+id/message"
-        android:gravity="fill_horizontal"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="25dp"
-        android:textSize="25dp"
-        android:textAlignment="center"
-        android:shadowColor="#424242"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="1"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:text="Insult"
         android:textColor="#212121"
+        android:textSize="70dp" />
 
-
-
-        />
-
-    <ImageButton
+        <ImageButton
         android:id="@+id/insulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/insulta"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:onClick="randomInsult" />
+        android:onClick="randomInsult"
+        android:src="@drawable/insulta" />
 
     <ImageButton
         android:id="@+id/compliments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/elogia"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:onClick="randomCompliment"/>
+        android:onClick="randomCompliment"
+        android:src="@drawable/elogia" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="1000dp"
+            android:layout_height="150dp"
+            android:shadowColor="#424242"
+            android:gravity="center_horizontal"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:textAlignment="center"
+            android:textColor="#212121"
+            android:textSize="25dp"
+            android:layout_above="@+id/insulta"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
 
 
 </RelativeLayout>

@@ -21,24 +21,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void randomInsult(View view) {
         Resources res = getResources();
-
         myString = res.getStringArray(R.array.insults);
-
         String q = myString[rgenerator.nextInt(myString.length)];
-
-        TextView tv = (TextView) findViewById(R.id.message);
-        tv.setText(q);
+        display(q);
     }
 
     public void randomCompliment(View view) {
         Resources res = getResources();
-
         myString = res.getStringArray(R.array.praises);
-
         String q = myString[rgenerator.nextInt(myString.length)];
-
-        TextView tv = (TextView) findViewById(R.id.message);
-        tv.setText(q);
+        display(q);
     }
 
     private void display(String message) {
