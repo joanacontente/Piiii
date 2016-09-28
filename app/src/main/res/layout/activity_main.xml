@@ -7,11 +7,13 @@
     tools:context="com.example.android.insult.MainActivity">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/mainview"
-        android:id="@+id/imageView" />
+        android:src="@drawable/imageview"
+        android:id="@+id/imageView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="match_parent"
@@ -19,19 +21,27 @@
         android:text="Insult"
         android:id="@+id/title"
         android:gravity="center_horizontal"
-        android:paddingTop="50dp"
         android:textSize="70dp"
         android:textColor="#212121"
         />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="1000dp"
+        android:layout_height="200dp"
         android:id="@+id/message"
-        android:gravity="center_vertical"
-        android:paddingTop="50dp"
-        android:textSize="70dp"
+        android:gravity="fill_horizontal"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="25dp"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:shadowColor="#424242"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
         android:textColor="#212121"
+
+
+
         />
 
     <ImageButton
