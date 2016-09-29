@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="Insult"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -19,16 +20,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:text="Insult"
-        android:textColor="#212121"
-        android:textSize="70dp" />
 
-        <ImageButton
+<ImageButton
         android:id="@+id/insulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,6 +55,19 @@
             android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/audiobutton"
+        style="@android:style/Widget.ImageButton"
+        android:background="@drawable/audiobutton"
+        android:id="@+id/audioButton"
+        tools:maxHeight="30dp"
+        tools:maxWidth="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
 
 
 </RelativeLayout>
