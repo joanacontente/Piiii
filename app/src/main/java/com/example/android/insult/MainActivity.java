@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
     public void disclaimMessage(View view){
         Resources res = getResources();
         String disclaimer = res.getString(R.string.disclaimer);
+        stringToSpeech = disclaimer;
         display(disclaimer);
     }
 
