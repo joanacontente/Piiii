@@ -12,6 +12,8 @@ import android.widget.Toast;
 import java.util.Locale;
 import java.util.Random;
 
+import static com.example.android.insult.R.drawable.disclaimer;
+
 public class MainActivity extends AppCompatActivity {
 
     private String[] myString;
@@ -70,6 +72,12 @@ public class MainActivity extends AppCompatActivity {
     private void display(String message) {
         TextView quantityTextView = (TextView) findViewById(R.id.message);
         quantityTextView.setText(message);
+    }
+
+    public void disclaimMessage(View view){
+        Resources res = getResources();
+        String disclaimer = res.getString(R.string.disclaimer);
+        display(disclaimer);
     }
 
 }

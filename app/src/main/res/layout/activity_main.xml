@@ -15,9 +15,36 @@
         android:scaleType="centerCrop"
         android:src="@drawable/imageview" />
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/disclaimer"
+        android:visibility="visible"
+        style="@android:style/Widget.ImageButton"
+        android:background="@drawable/disclaimer"
+        tools:maxHeight="10dp"
+        tools:maxWidth="10dp"
+        android:onClick="disclaimMessage"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/audiobutton"
+        style="@android:style/Widget.ImageButton"
+        android:background="@drawable/audiobutton"
+        android:id="@+id/audioButton"
+        tools:maxHeight="30dp"
+        tools:maxWidth="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
 
 <ImageButton
@@ -59,19 +86,6 @@
             android:layout_alignParentEnd="true" />
 
     </RelativeLayout>
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/audiobutton"
-        style="@android:style/Widget.ImageButton"
-        android:background="@drawable/audiobutton"
-        android:id="@+id/audioButton"
-        tools:maxHeight="30dp"
-        tools:maxWidth="30dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true" />
 
 
 </RelativeLayout>
