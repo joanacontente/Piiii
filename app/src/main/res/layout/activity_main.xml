@@ -16,59 +16,63 @@
         android:scaleType="centerCrop"
         android:src="@drawable/imageview" />
 
-    <ImageButton
-        android:id="@+id/audioButton"
-        style="@android:style/Widget.ImageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/audiobutton"
-        android:src="@drawable/audiobutton"
-        tools:maxHeight="30dp"
-        tools:maxWidth="30dp" />
-
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
 
-
-    <ImageButton
+<ImageButton
         android:id="@+id/insulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:onClick="randomInsult"
-        android:src="@drawable/insulta" />
-
-    <ImageButton
-        android:id="@+id/compliments"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:onClick="randomCompliment"
-        android:src="@drawable/elogia" />
-
+        android:src="@drawable/insulta"
+        android:background="@drawable/insulta"/>
 
         <TextView
             android:id="@+id/message"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"
+            android:layout_width="1000dp"
+            android:layout_height="150dp"
             android:shadowColor="#424242"
+            android:gravity="center_horizontal"
             android:shadowDx="1"
             android:shadowDy="1"
             android:shadowRadius="1"
             android:textAlignment="center"
             android:textColor="#212121"
             android:textSize="25dp"
-            />
+            android:layout_marginBottom="47dp"
+            android:layout_above="@+id/compliments"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:id="@+id/compliments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="randomCompliment"
+            android:src="@drawable/elogia"
+            android:background="@drawable/elogia"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
     </RelativeLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/audiobutton"
+        style="@android:style/Widget.ImageButton"
+        android:background="@drawable/audiobutton"
+        android:id="@+id/audioButton"
+        tools:maxHeight="30dp"
+        tools:maxWidth="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+
 
 </RelativeLayout>
