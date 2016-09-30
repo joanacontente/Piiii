@@ -56,19 +56,21 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:onClick="randomInsult"
-        android:src="@drawable/insults"
-        android:background="@drawable/insults"/>
+        android:background="@drawable/insults"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"/>
 
     <ImageButton
         android:id="@+id/compliments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="randomCompliment"
-        android:src="@drawable/compliments"
         android:background="@drawable/compliments"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"/>
 
     <TextView
         android:id="@+id/message"
