@@ -16,38 +16,40 @@
         android:src="@drawable/imageview" />
 
     <ImageButton
+        style="@android:style/Widget.ImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/disclaimer"
+        android:onClick="disclaimMessage"
         android:src="@drawable/disclaimer"
         android:visibility="visible"
-        style="@android:style/Widget.ImageButton"
-        android:background="@drawable/disclaimer"
         tools:maxHeight="10dp"
-        tools:maxWidth="10dp"
-        android:onClick="disclaimMessage"/>
+        tools:maxWidth="10dp"/>
 
     <ImageButton
+        android:id="@+id/audioButton"
+        style="@android:style/Widget.ImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/audiobutton"
-        style="@android:style/Widget.ImageButton"
-        android:background="@drawable/audiobutton"
-        android:id="@+id/audioButton"
-        tools:maxHeight="30dp"
-        tools:maxWidth="30dp"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/audiobutton"
+        android:src="@drawable/audiobutton"
+        tools:maxHeight="30dp"
+        tools:maxWidth="30dp" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
 
-<ImageButton
+    </RelativeLayout>
+
+    <ImageButton
         android:id="@+id/insulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -57,35 +59,32 @@
         android:src="@drawable/insulta"
         android:background="@drawable/insulta"/>
 
-        <TextView
-            android:id="@+id/message"
-            android:layout_width="1000dp"
-            android:layout_height="150dp"
-            android:shadowColor="#424242"
-            android:gravity="center_horizontal"
-            android:shadowDx="1"
-            android:shadowDy="1"
-            android:shadowRadius="1"
-            android:textAlignment="center"
-            android:textColor="#212121"
-            android:textSize="25dp"
-            android:layout_marginBottom="95dp"
-            android:layout_above="@+id/compliments"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+    <ImageButton
+        android:id="@+id/compliments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="randomCompliment"
+        android:src="@drawable/elogia"
+        android:background="@drawable/elogia"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
-        <ImageButton
-            android:id="@+id/compliments"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="randomCompliment"
-            android:src="@drawable/elogia"
-            android:background="@drawable/elogia"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-    </RelativeLayout>
-
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="1000dp"
+        android:layout_height="150dp"
+        android:gravity="center_horizontal"
+        android:shadowColor="#424242"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:textAlignment="center"
+        android:textColor="#212121"
+        android:textSize="25dp"
+        android:layout_marginBottom="96dp"
+        android:layout_above="@+id/compliments"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

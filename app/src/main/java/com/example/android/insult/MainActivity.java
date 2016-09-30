@@ -5,14 +5,14 @@ import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Locale;
 import java.util.Random;
-
-import static com.example.android.insult.R.drawable.disclaimer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void randomInsult(View view) {
+        didTapButton(view, R.id.insulta);
         Resources res = getResources();
         myString = res.getStringArray(R.array.insults);
         stringToSpeech = myString[rgenerator.nextInt(myString.length)];
@@ -63,10 +64,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void randomCompliment(View view) {
+        didTapButton(view, R.id.compliments);
         Resources res = getResources();
         myString = res.getStringArray(R.array.compliments);
         stringToSpeech = myString[rgenerator.nextInt(myString.length)];
         display(stringToSpeech);
+
+
+
     }
 
     private void display(String message) {
@@ -79,6 +84,18 @@ public class MainActivity extends AppCompatActivity {
         String disclaimer = res.getString(R.string.disclaimer);
         stringToSpeech = disclaimer;
         display(disclaimer);
+    }
+
+    public void didTapButton(View view, int id) {
+        ImageButton button = (ImageButton)findViewById(id);
+        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
+
+        // Use bounce.xml interpolator with amplitude 0.2
+        // and frequency 20
+        com.example.android.insult.BounceInterpolator interpolator = new com.example.android.insult.BounceInterpolator(0.2, 20);
+        myAnim.setInterpolator(interpolator);
+
+        button.startAnimation(myAnim);
     }
 
 }
