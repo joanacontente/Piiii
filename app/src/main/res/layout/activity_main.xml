@@ -84,7 +84,7 @@
         android:textAlignment="center"
         android:textColor="#212121"
         android:textSize="25dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="110dp"
         android:layout_above="@+id/compliments" />
 
 </RelativeLayout>
