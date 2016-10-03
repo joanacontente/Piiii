@@ -25,7 +25,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.openview);
+    }
+
+    public void startApp(View view){
         setContentView(R.layout.activity_main);
+
         b1=(ImageButton) findViewById(R.id.audioButton);
 
         t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -69,9 +74,6 @@ public class MainActivity extends AppCompatActivity {
         myString = res.getStringArray(R.array.compliments);
         stringToSpeech = myString[rgenerator.nextInt(myString.length)];
         display(stringToSpeech);
-
-
-
     }
 
     private void display(String message) {
@@ -97,5 +99,4 @@ public class MainActivity extends AppCompatActivity {
 
         button.startAnimation(myAnim);
     }
-
 }
