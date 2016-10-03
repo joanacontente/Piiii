@@ -24,7 +24,8 @@
         android:src="@drawable/disclaimer"
         android:visibility="visible"
         tools:maxHeight="10dp"
-        tools:maxWidth="10dp"/>
+        tools:maxWidth="5dp"
+        android:layout_marginLeft="10dp"/>
 
     <ImageButton
         android:id="@+id/audioButton"
@@ -83,7 +84,7 @@
         android:shadowDy="1"
         android:shadowRadius="1"
         android:textColor="#212121"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:gravity="center"
         android:layout_centerVertical="true"
         />
