@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.open_view);
+        didTapButton(R.id.startApp);
     }
 
     public void startApp(View view){
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void randomInsult(View view) {
-        didTapButton(view, R.id.insulta);
+        didTapButton(R.id.insulta);
         Resources res = getResources();
         myString = res.getStringArray(R.array.insults);
         stringToSpeech = myString[rgenerator.nextInt(myString.length)];
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void randomCompliment(View view) {
-        didTapButton(view, R.id.compliments);
+        didTapButton(R.id.compliments);
         Resources res = getResources();
         myString = res.getStringArray(R.array.compliments);
         stringToSpeech = myString[rgenerator.nextInt(myString.length)];
@@ -88,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         display(disclaimer);
     }
 
-    public void didTapButton(View view, int id) {
+    public void didTapButton(int id) {
         ImageButton button = (ImageButton)findViewById(id);
         final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
 
