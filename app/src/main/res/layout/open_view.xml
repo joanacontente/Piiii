@@ -6,17 +6,6 @@
     android:background="@color/colorBackground"
     >
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Piropos e insultos"
-        android:textSize="20dp"
-        android:textColor="?android:attr/panelColorBackground"
-        android:layout_marginBottom="213dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
     <ImageButton
         android:id="@+id/startApp"
         android:layout_width="wrap_content"
@@ -25,7 +14,18 @@
         android:src="@drawable/pi"
         android:onClick="startApp"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Piropos e insultos"
+        android:textSize="20dp"
+        android:textColor="?android:attr/panelColorBackground"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/startApp"
+        />
 
 
 </RelativeLayout>
