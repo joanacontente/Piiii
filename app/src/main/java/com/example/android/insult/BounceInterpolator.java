@@ -1,8 +1,6 @@
 package com.example.android.insult;
 
-/**
- * Created by Altran on 29/09/2016.
- */
+
 
     class BounceInterpolator implements android.view.animation.Interpolator {
         double mAmplitude = 1;
