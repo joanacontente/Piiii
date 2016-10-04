@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.open_view);
-        didTapButton(R.id.startApp);
+        buttonAnimation(R.id.startApp);
     }
 
     public void startApp(View view){
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void randomInsult(View view) {
-        didTapButton(R.id.insults);
+        buttonAnimation(R.id.insults);
         Resources res = getResources();
         myString = res.getStringArray(R.array.insults);
         stringToSpeech = myString[rGenerator.nextInt(myString.length)];
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void randomCompliment(View view) {
-        didTapButton(R.id.compliments);
+        buttonAnimation(R.id.compliments);
         Resources res = getResources();
         myString = res.getStringArray(R.array.compliments);
         stringToSpeech = myString[rGenerator.nextInt(myString.length)];
@@ -89,11 +89,11 @@ public class MainActivity extends AppCompatActivity {
         display(disclaimer);
     }
 
-    public void didTapButton(int id) {
+    public void buttonAnimation(int id) {
         ImageButton button = (ImageButton)findViewById(id);
-        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
+        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.animation);
 
-        // Use bounce.xml interpolator with amplitude 0.2
+        // Use animation.xmlxml interpolator with amplitude 0.2
         // and frequency 20
         com.example.android.insult.BounceInterpolator interpolator = new com.example.android.insult.BounceInterpolator(0.2, 20);
         myAnim.setInterpolator(interpolator);
