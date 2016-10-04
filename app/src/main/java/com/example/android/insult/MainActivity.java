@@ -17,7 +17,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     private String[] myString;
-    private static final Random rgenerator = new Random();
+    private static final Random rGenerator = new Random();
     private TextToSpeech t1;
     private ImageButton b1;
     private String stringToSpeech;
@@ -62,10 +62,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void randomInsult(View view) {
-        didTapButton(R.id.insulta);
+        didTapButton(R.id.insults);
         Resources res = getResources();
         myString = res.getStringArray(R.array.insults);
-        stringToSpeech = myString[rgenerator.nextInt(myString.length)];
+        stringToSpeech = myString[rGenerator.nextInt(myString.length)];
         display(stringToSpeech);
     }
 
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         didTapButton(R.id.compliments);
         Resources res = getResources();
         myString = res.getStringArray(R.array.compliments);
-        stringToSpeech = myString[rgenerator.nextInt(myString.length)];
+        stringToSpeech = myString[rGenerator.nextInt(myString.length)];
         display(stringToSpeech);
     }
 
