@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String toSpeak = stringToSpeech;
-                Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
                 t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
             }
         });
