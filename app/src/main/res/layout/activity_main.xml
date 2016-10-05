@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/disclaimer"
-        android:onClick="disclaimMessage"
+        android:onClick="showDisclaimMessage"
         android:src="@drawable/disclaimer"
         android:visibility="visible"
         tools:maxHeight="10dp"
@@ -46,7 +46,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true">
-
 
     </RelativeLayout>
 
