@@ -6,13 +6,12 @@
     android:background="@color/colorBackground"
     >
 
-    <ImageButton
+    <ImageView
         android:id="@+id/startApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/pi"
         android:src="@drawable/pi"
-        android:onClick="startApp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         />
@@ -25,7 +24,15 @@
         android:textColor="?android:attr/panelColorBackground"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/startApp"
-        />
+        android:id="@+id/textView" />
 
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="69dp" />
 
 </RelativeLayout>

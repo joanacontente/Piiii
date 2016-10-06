@@ -3,12 +3,12 @@ package com.example.android.insult;
 import android.content.Context;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 
 /**
  * Static class responsible for animate buttons.
  */
-public class ButtonAnimation {
+public class Animations {
 
     /**
      * Give a bouncing animation to a given button.
@@ -19,7 +19,7 @@ public class ButtonAnimation {
      * @param amplitude Amplitude of the animation.
      * @param frequency Frequency of the animation.
      */
-    public static void bounce(Context context, ImageButton button, float amplitude, float frequency) {
+    public static void bounce(Context context, ImageView button, float amplitude, float frequency) {
         Animation myAnim = AnimationUtils.loadAnimation(context, R.anim.animation);
 
         // Use animation.xml interpolator with amplitude 0.2 and frequency 20

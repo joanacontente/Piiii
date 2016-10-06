@@ -27,19 +27,36 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     /**
-     * Initialize the splash screen and the class variables.
+     * Initialize the class variables.
      * @see AppCompatActivity#onCreate(Bundle)
      */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.open_view);
+        setContentView(R.layout.activity_main);
 
-        // Initialize class variables
+        // Initialize class variable
+        txtViewMessage = (TextView) findViewById(R.id.message);
+        btnAudio = (ImageButton) findViewById(R.id.audioButton);
         display = new Display();
         sentenceSelector = new SentenceSelector(getResources());
 
-        // Splash screen animation
-        ButtonAnimation.bounce(this, (ImageButton) findViewById(R.id.startApp), 0.2f, 20f);
+        textToSpeech = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if (status != TextToSpeech.ERROR) {
+                    textToSpeech.setLanguage(new Locale("pt"));
+                }
+            }
+        });
+
+        btnAudio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String toSpeak = stringToSpeech;
+                textToSpeech.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+            }
+        });
+
     }
 
     @Override
@@ -57,42 +74,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Change to the main activity view, create the audio button
-     * and initialize the textToSpeech variable.
-     * @param view
-     */
-    public void startApp(View view){
-        setContentView(R.layout.activity_main);
-
-        // Initialize class variable
-        txtViewMessage = (TextView) findViewById(R.id.message);
-        btnAudio = (ImageButton) findViewById(R.id.audioButton);
-
-        textToSpeech = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int status) {
-                if (status != TextToSpeech.ERROR) {
-                    textToSpeech.setLanguage(new Locale("pt"));
-                }
-            }
-        });
-
-        btnAudio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String toSpeak = stringToSpeech;
-                Toast.makeText(getApplicationContext(), toSpeak, Toast.LENGTH_SHORT).show();
-                textToSpeech.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
-            }
-        });
-    }
-
-    /**
      * Show and animate the insult button.
      * @param view
      */
     public void randomInsult(View view) {
-        ButtonAnimation.bounce(this, (ImageButton) findViewById(R.id.insults), 0.2f, 20f);
+        Animations.bounce(this, (ImageButton) findViewById(R.id.insults), 0.2f, 20f);
         stringToSpeech = sentenceSelector.getRandomInsult();
         display.message(txtViewMessage, stringToSpeech);
     }
@@ -102,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void randomCompliment(View view) {
-        ButtonAnimation.bounce(this, (ImageButton) findViewById(R.id.compliments), 0.2f, 20f);
+        Animations.bounce(this, (ImageButton) findViewById(R.id.compliments), 0.2f, 20f);
         stringToSpeech = sentenceSelector.getRandomCompliment();
         display.message(txtViewMessage, stringToSpeech);
     }

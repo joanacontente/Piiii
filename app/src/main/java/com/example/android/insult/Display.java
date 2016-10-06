@@ -9,11 +9,11 @@ public class Display {
 
     /**
      * Display a simple message on the screen.
-     * @param quantityTextView  Target TextVIew for displaying the message.
-     * @param message           Message to be shown.
+     * @param textView  Target TextView for displaying the message.
+     * @param message   Message to be shown.
      */
-    public void message(TextView quantityTextView, String message) {
-        quantityTextView.setText(message);
+    public void message(TextView textView, String message) {
+        textView.setText(message);
     }
 
 }
