@@ -1,5 +1,7 @@
 package com.example.android.insult;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -103,4 +105,12 @@ public class MainActivity extends AppCompatActivity {
         display.message(txtViewMessage, disclaimer);
     }
 
+    public void composeMmsMessage(View view) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("smsto:"));  // This ensures only SMS apps respond
+        intent.putExtra("sms_body", stringToSpeech);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
 }
