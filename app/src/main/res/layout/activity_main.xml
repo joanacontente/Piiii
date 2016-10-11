@@ -66,7 +66,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:onClick="composeMmsMessage"
-        android:background="@drawable/disclaimer"
+        android:background="@drawable/sms_btn"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="10dp"/>
 
@@ -82,17 +82,6 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"/>
 
-    <ImageButton
-        android:id="@+id/smsButton"
-        style="@android:style/Widget.ImageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/sound_off_btn"
-        android:background="@drawable/sms_btn"
-        tools:maxHeight="30dp"
-        tools:maxWidth="30dp" />
 
     <TextView
         android:id="@+id/message"
@@ -109,5 +98,14 @@
         android:gravity="center"
         android:layout_centerVertical="true"
         />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baloon_bg"
+        android:layout_above="@+id/insults"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="53dp" />
+
 
 </RelativeLayout>
