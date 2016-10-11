@@ -4,16 +4,9 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.insult.MainActivity">
+    tools:context="com.example.android.insult.MainActivity"
+    android:background="@drawable/bg">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bg" />
 
     <ImageButton
         style="@android:style/Widget.ImageButton"
@@ -39,14 +32,6 @@
         tools:maxHeight="30dp"
         tools:maxWidth="30dp" />
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
-
-    </RelativeLayout>
 
     <ImageButton
         android:id="@+id/insults"
@@ -82,30 +67,20 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"/>
 
-
     <TextView
         android:id="@+id/message"
-        android:layout_width="500dp"
-        android:layout_height="150dp"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        android:shadowColor="#424242"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="1"
-        android:textColor="#212121"
-        android:textSize="20dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:background="@drawable/baloon_bg"
         android:gravity="center"
-        android:layout_centerVertical="true"
-        />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baloon_bg"
-        android:layout_above="@+id/insults"
+        android:layout_below="@+id/audioButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="53dp" />
+        android:layout_marginTop="45dp" />
 
 
 </RelativeLayout>

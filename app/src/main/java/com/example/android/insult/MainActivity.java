@@ -1,6 +1,7 @@
 package com.example.android.insult;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
@@ -35,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TextView tv = (TextView) findViewById(R.id.message);
+        Typeface face = Typeface.createFromAsset(getAssets(),
+                "fonts/moonFlower.ttf");
+        tv.setTypeface(face);
 
         // Initialize class variable
         txtViewMessage = (TextView) findViewById(R.id.message);
@@ -108,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
     public void composeMmsMessage(View view) {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("smsto:"));  // This ensures only SMS apps respond
-        intent.putExtra("sms_body", stringToSpeech);
+        intent.putExtra("sms_body", stringToSpeech + "\n- via Piiii");
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }

@@ -24,10 +24,6 @@ public class SplashScreenActivity extends AppCompatActivity {
         // Splash screen animation
         Animations.bounce(this, (ImageView) findViewById(R.id.startApp), 0.2f, 20f);
 
-        TextView myTextView=(TextView)findViewById(R.id.textView);
-        Typeface typeFace=Typeface.createFromAsset(getAssets(),"SUNN.otf");
-        myTextView.setTypeface(typeFace);
-
         // Create a delay before showing the main view
         new android.os.Handler().postDelayed(new Runnable() {
             @Override

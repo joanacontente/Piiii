@@ -15,24 +15,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="69dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Piropos e insultos"
-        android:id="@+id/textView"
-        android:textSize="40dp"
-        android:textColor="@android:color/black"
-        android:layout_above="@+id/progressBar"
-        android:layout_centerHorizontal="true"
-        android:textStyle="normal|bold" />
 
     <ImageView
         android:id="@+id/startApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/logo"
-        android:layout_marginBottom="12dp"
-        android:layout_above="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        android:layout_above="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="52dp" />
 
 </RelativeLayout>
