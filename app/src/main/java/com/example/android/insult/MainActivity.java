@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton btnAudio;
     private String stringToSpeech;
 
+
     @Override
     /**
      * Initialize the class variables.
@@ -37,14 +38,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView tv = (TextView) findViewById(R.id.message);
-        Typeface face = Typeface.createFromAsset(getAssets(),
-                "fonts/moonFlower.ttf");
-        tv.setTypeface(face);
 
         // Initialize class variable
         txtViewMessage = (TextView) findViewById(R.id.message);
+        Typeface face = Typeface.createFromAsset(getAssets(),
+                "fonts/moonFlower.ttf");
+        txtViewMessage.setTypeface(face);
         btnAudio = (ImageButton) findViewById(R.id.audioButton);
+
         display = new Display();
         sentenceSelector = new SentenceSelector(getResources());
 
@@ -62,6 +63,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String toSpeak = stringToSpeech;
                 textToSpeech.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+                ImageButton imageButton = (ImageButton)findViewById(R.id.audioButton);
+                imageButton.getResources().getDrawable(R.drawable.sound_on_btn);
+                imageButton.setImageDrawable(imageButton.getResources().getDrawable(R.drawable.sound_on_btn));
+
             }
         });
 
@@ -77,6 +82,9 @@ public class MainActivity extends AppCompatActivity {
             textToSpeech.stop();
             textToSpeech.shutdown();
         }
+            ImageButton imageButton = (ImageButton)findViewById(R.id.audioButton);
+            imageButton.getResources().getDrawable(R.drawable.sound_off_btn);
+            imageButton.setImageDrawable(imageButton.getResources().getDrawable(R.drawable.sound_off_btn));
 
         super.onPause();
     }
@@ -86,7 +94,9 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void randomInsult(View view) {
-        Animations.bounce(this, (ImageButton) findViewById(R.id.insults), 0.2f, 20f);
+        //Animations.bounce(this, (ImageButton) findViewById(R.id.insults), 0.2f, 20f);
+//        ImageButton flashButtonOn = (ImageButton) findViewById(R.id.insults);
+//        flashButtonOn.setBackgroundResource(R.drawable.insult_down_btn);
         stringToSpeech = sentenceSelector.getRandomInsult();
         display.message(txtViewMessage, stringToSpeech);
     }
@@ -96,7 +106,9 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void randomCompliment(View view) {
-        Animations.bounce(this, (ImageButton) findViewById(R.id.compliments), 0.2f, 20f);
+        //Animations.bounce(this, (ImageButton) findViewById(R.id.compliments), 0.2f, 20f);
+//        ImageButton flashButtonOn = (ImageButton) findViewById(R.id.compliments);
+//        flashButtonOn.setBackgroundResource(R.drawable.compliment_down_btn);
         stringToSpeech = sentenceSelector.getRandomCompliment();
         display.message(txtViewMessage, stringToSpeech);
     }
